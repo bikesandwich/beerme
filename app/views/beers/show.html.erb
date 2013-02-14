@@ -1,0 +1,34 @@
+<span class="single">
+<p id="notice"><%= notice %></p>
+
+<div class="back">
+<%= link_to '<< Back', beers_path %>
+</div>
+
+<div class="beer">
+<h2>
+  <%= @beer.title %>
+</h2>
+
+<p class="brewery">
+  <%= @beer.brewery %>
+</p>
+
+<p class="rating">
+  
+  Rating: <%= @beer.rating %> <!-- |  Wishlist: <%= @beer.wishlist ? "Yes" : "No" %> -->
+</p>
+<p class="note">
+  <%= @beer.note %>
+</p>
+
+             
+             
+             <small><%= link_to 'Edit', edit_beer_path(@beer) %> |
+             <%= link_to 'Delete', @beer, method: :delete, data: { confirm: 'Are you sure?' } %>
+            
+
+</small>
+
+</div>
+</span>

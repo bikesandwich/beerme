@@ -1,0 +1,3 @@
+class Beer < ActiveRecord::Base
+  attr_accessible :brewery, :note, :rating, :title, :wishlist
+end

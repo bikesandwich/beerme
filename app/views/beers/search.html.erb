@@ -1,0 +1,19 @@
+<h1> Searched for "<%= params[:search_text] %>"  <small> &nbsp;<a href="<%= beers_url %>">clear search</a></small></h1>
+
+
+<% if @beers %>
+
+         <% @beers.each do |beer| %>
+         
+         <div class="beer">
+         <h2> <%= link_to beer.title, beer %></h2>
+            <p class="brewery"><%= beer.brewery %></p>
+             <p class="rating"><%= beer.rating %> Stars <!-- |  Wishlist: <%= beer.wishlist ? "Yes" : "No" %>--></p>
+            
+         </div> 
+         <% end %>
+
+
+
+
+<% end %>

@@ -1,0 +1,19 @@
+---
+applications:
+  .:
+    name: beerme
+    framework:
+      name: rails3
+      info:
+        mem: 256M
+        description: Rails Application
+        exec: 
+    infra: aws
+    url: beerme.aws.af.cm
+    mem: 128M
+    instances: 1
+    services:
+      beerme-mysql-51907:
+        type: mysql
+      /:
+        type: mysql
