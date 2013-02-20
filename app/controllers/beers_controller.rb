@@ -46,7 +46,7 @@ class BeersController < ApplicationController
 
     respond_to do |format|
       if @beer.save
-        format.html { redirect_to @beer, notice: 'Beer was successfully created.' }
+        format.html { redirect_to @beer, notice: 'Beer was successfully added.' }
       else
         format.html { render action: "new" }
       end
