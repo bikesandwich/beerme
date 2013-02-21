@@ -7,10 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= form_tag search_beers_path, :method => 'get' do %>
+
 <div class="header">
-	<h3 class="logo">BeerMe</h3>
-	<div class="search">
+	<h3 class="logo"><a href="/beers/">BeerMe</a></h3>
+	
+	  <%= form_tag search_beers_path, :method => 'get' do %>
+	  <div class="search">
 		<p>
 		<strong><%= label_tag :search_text, "Search" %></strong>
 		<%= text_field_tag :search_text, params[:search_text] %>
@@ -18,11 +20,33 @@
 		<span class="actions">
 		<%= submit_tag 'Search' %>
 		</span></p>
+		<% end%>
 	</div>
 </div>
 <div class="content">
+  
+  <% if current_user %>
+<%= current_user.user_name %> is logged in 
+(<%= link_to 'Logout', logout_url, :method => :delete %>)
+<% else %>
+<%= form_tag login_url do %>
+  <p>
+  <label for="name">Name:</label>
+  <%= text_field_tag :user_name, params[:user_name] %>
+
+  <label for="password">Password:</label>
+  <%= password_field_tag :password %>
+
+
+  
+  <%= submit_tag 'Login' %>
+    </p>
+  <% end %>
+<% end %></div>
+  
+  
 <%= yield %>
 </div>
-<% end%>
+
 </body>
 </html>

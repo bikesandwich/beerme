@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Review:</b>
+  <%= @check_in.review %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @check_in.rating %>
+</p>
+
+<p>
+  <b>Wishlist:</b>
+  <%= @check_in.wishlist %>
+</p>
+
+<p>
+  <b>Beer:</b>
+  <%= @check_in.beer_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @check_in.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_check_in_path(@check_in) %> |
+<%= link_to 'Back', check_ins_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User name:</b>
+  <%= @user.user_name %>
+</p>
+
+<p>
+  <b>User type:</b>
+  <%= @user.user_type %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Password digest:</b>
+  <%= @user.password_digest %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

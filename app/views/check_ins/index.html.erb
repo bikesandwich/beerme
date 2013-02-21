@@ -1,0 +1,31 @@
+<h1>Listing check_ins</h1>
+
+<table>
+  <tr>
+    <th>Review</th>
+    <th>Rating</th>
+    <th>Wishlist</th>
+    <th>Beer</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @check_ins.each do |check_in| %>
+  <tr>
+    <td><%= check_in.review %></td>
+    <td><%= check_in.rating %></td>
+    <td><%= check_in.wishlist %></td>
+    <td><%= check_in.beer_id %></td>
+    <td><%= check_in.user_id %></td>
+    <td><%= link_to 'Show', check_in %></td>
+    <td><%= link_to 'Edit', edit_check_in_path(check_in) %></td>
+    <td><%= link_to 'Destroy', check_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Check in', new_check_in_path %>

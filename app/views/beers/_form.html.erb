@@ -19,20 +19,27 @@
     <%= f.label :brewery %><br />
     <%= f.text_field :brewery %>
   </div>
+    <div class="field">
+    <%= f.label :note, "Description" %><br />
+    <%= f.text_area :note %>
+  </div>
+    <div class="field">
+    <%= f.label :style %><br />
+    <%= f.text_field :style  %>
+  </div>
+
+  <!-- Removed from the Beers - added to Reviews
   <div class="field">
     <%= f.label :rating %><br />
     <%= f.select :rating, [['Rate this beer'], ['Piss Water', 1], ['Not Good', 2],
 ['Decent', 3], ['Really Good', 4],
                                ['Superb', 5]]     %>
-  </div>
-  <div class="field">
-    <%= f.label :note %><br />
-    <%= f.text_area :note %>
-  </div>
+  </div> -->
+  <!-- Removed from the Beers - added to Reviews
   <div class="field">
     <%= f.check_box :wishlist %><%= f.label :wishlist, 'Add to Wishlist' %> 
     
-  </div>
+  </div> -->
   <div class="actions">
     <%= f.submit %>
   </div>

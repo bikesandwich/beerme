@@ -1,5 +1,19 @@
 Beerme::Application.routes.draw do
 
+controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+  resources :styles
+
+
+  resources :check_ins
+
+
+  resources :users
+
 
 resources :beers do
        collection do
