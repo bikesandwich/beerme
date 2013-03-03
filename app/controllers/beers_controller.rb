@@ -15,6 +15,7 @@ class BeersController < ApplicationController
   # GET /beers/1
   def show
     @beer = Beer.find(params[:id])
+    @check_in = CheckIn.new
 
     respond_to do |format|
       format.html # show.html.erb

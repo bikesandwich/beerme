@@ -1,9 +1,10 @@
 <span class="single">
-<p id="notice"><%= notice %></p>
+
 
 <div class="back">
 <%= link_to '<< Back', beers_path %>
 </div>
+<p id="notice"><%= notice %></p>
 
 <div class="beer">
 <h2>
@@ -36,4 +37,64 @@
 </small>
 
 </div>
-</span>
+
+<div class="beer">
+  <h3>Check In</h3>
+  
+      <%= form_for(@check_in) do |f| %>
+  <% if @check_in.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@check_in.errors.count, "error") %> prohibited this check_in from being saved:</h2>
+
+      <ul>
+      <% @check_in.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= f.hidden_field :beer_id, :value => @beer.id %>
+
+  <div class="field">
+    <%= f.label :review %><br />
+    <%= f.text_area :review, :rows => "3" %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br />
+    <%= f.select :rating, [1, 2, 3, 4, 5] %>
+  </div>
+  <div class="field">
+    <%= f.label :wishlist %><br />
+    <%= f.check_box :wishlist %>
+  </div>
+
+
+  <div class="actions">
+    <%= submit_tag "Check In" %>
+  </div>
+<% end %>
+
+</div>
+  
+
+  
+  <% @beer.check_in.order("created_at DESC").each do |r|  %>
+  <div class="beer">
+<p>
+Author: <%= r.user_id ? r.user.user_name : "Anonymous" %><br>
+Rating: <%= r.rating %><br>
+Review: <%= r.review %><br>
+<%= r.wishlist ? "On wishlist" : "Not on wishlist" %><br>
+
+
+Review date: <%= r.created_at %>
+
+</p>
+<small><%= link_to 'edit', edit_check_in_path(r) %></small>
+</div>
+<% end %>
+
+
+
+
+

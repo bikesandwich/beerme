@@ -13,25 +13,25 @@
 
   <div class="field">
     <%= f.label :review %><br />
-    <%= f.text_area :review %>
+    <%= f.text_area :review, :rows => "3" %>
   </div>
   <div class="field">
     <%= f.label :rating %><br />
-    <%= f.number_field :rating %>
+    <%= f.select :rating, [1, 2, 3, 4, 5] %>
   </div>
   <div class="field">
     <%= f.label :wishlist %><br />
     <%= f.check_box :wishlist %>
   </div>
-  <div class="field">
+  <!--<div class="field">
     <%= f.label :beer_id %><br />
-    <%= f.number_field :beer_id %>
+    <%= f.text_field :beer_id  %>
   </div>
-  <div class="field">
+   <div class="field">
     <%= f.label :user_id %><br />
     <%= f.number_field :user_id %>
-  </div>
+  </div> -->
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag "Check In"  %>
   </div>
 <% end %>
