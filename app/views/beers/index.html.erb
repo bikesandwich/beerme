@@ -11,7 +11,7 @@
          <h2> <%= link_to beer.title, beer %></h2>
             <p class="brewery">Brewery: <%= beer.brewery %></p>
             <p class="style">Style: <%= beer.style %></p>
-			<p class="brewery">Number of check-ins: <%= CheckIn.count(beer.id, :distinct => false) %></p>
+			<p class="brewery">Number of check-ins: <%= CheckIn.count(:all, :conditions => ['beer_id = ?', beer.id]) %></p>
              <!-- <p class="rating"><%= beer.rating %> Stars |  Wishlist: <%= beer.wishlist ? "Yes" : "No" %></p>-->
             
          </div> 
