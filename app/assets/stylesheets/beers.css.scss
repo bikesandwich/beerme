@@ -96,9 +96,11 @@ h1 {
  	height:136px;
  	width:424px;
  	background-image:url("/assets/logo.png");
+ 	opacity:.7;
  }
  h3.logo a:hover{
  	background-color:transparent !important;
+ 	opacity:.9;
  }
   .search { width: 320px; float: right; }
 .content { margin: 15px 30px 20px 30px; }
@@ -169,3 +171,43 @@ h1 {
 }
 
 .back a {font-size: 14px; font-weight: bold; display: block; padding: 4px; margin-bottom: 10px; width: 292px;}
+
+
+ #nav{
+	 position:absolute;
+ 	top:10px;
+ 	right:30px;
+ }
+ 
+ #nav ul{
+ 	list-style-type:none;
+ 	margin:0 0 0 0;
+ 	padding:5px;
+ 	float:right;
+ 	background-color:rgba(188,123,3,.7);
+ 	border-radius:5px;
+ 	-webkit-box-shadow:  2px 2px 5px 2px rgba(113, 74, 3, .8);
+        box-shadow:  2px 2px 5px 2px rgba(113, 74, 3, .8);
+        overflow:auto;
+ }
+ 
+ #nav ul li{
+ 	float:left;
+ 	margin-right:10px;
+ }
+ #nav ul li:last-of-type{
+ 	margin-right:0;
+ }
+ 
+ #nav ul li a{
+ 	text-decoration:none;
+ 	color:#3c1400;
+ 	padding:4px 10px;
+ 	border-radius:5px;
+ 	color:#fff;
+ }
+ #nav ul li a:hover{
+ 	text-decoration:none;
+ 	background-color:#3c1400;
+ 	color:#fff;
+ }
