@@ -79,27 +79,8 @@ div {
 h1 {
   small { font-weight: normal; font-size: .6em;}
 }
-.header { width: 100%; height: 200px; background: url('/assets/beerme-header.jpg') top left;  margin: 0; padding: 0; border-bottom: 1px solid #630;}
+.header { width: 100%; height: 200px; background: url('/assets/beerme-header.jpg') top right;  margin: 0; padding: 0; border-bottom: 1px solid #630;}
   .logo { font-size: 64px; color: #630; padding: 130px 0 0 35px; margin: 0; }
- 
- h3.logo {
- 	height:136px;
- 	width:424px;
- 	margin:0;
- 	padding:0;
- 	position:relative;
- 	top:60px;
- }
- h3.logo a{
- 	 display:block;
- 	text-indent:-9999px;
- 	height:136px;
- 	width:424px;
- 	background-image:url("/assets/logo.png");
- }
- h3.logo a:hover{
- 	background-color:transparent !important;
- }
   .search { width: 320px; float: right; }
 .content { margin: 15px 30px 20px 30px; }
 

@@ -42,7 +42,7 @@
   <%= submit_tag 'Login' %>
     </p>
   <% end %>
-<% end %>
+<% end %></div>
   
   
 <%= yield %>
