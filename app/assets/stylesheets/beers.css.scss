@@ -104,7 +104,7 @@ h1 {
  }
   .search { width: 320px; float: right; }
 .content { margin: 15px 30px 20px 30px; }
-
+.home {margin: 15px 30px 20px 30px; }
 .beer {
 	padding: 15px;
 	background: #ededed;
@@ -129,8 +129,8 @@ h1 {
 }
 
 
-.newbeer { width: 100%; clear: both; margin: 0 0 30px 0;}
-.newbeer a, .actions input {
+.button { width: 100%; clear: both; margin: 0 0 30px 0;}
+.button a, .actions input {
    background-color:#663300;/* fallback */
    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #834200), color-stop(1, #5a2d00) );/* chrome 2+, safari 4+ */
    background-image:-webkit-linear-gradient(#834200,#5a2d00); /* chrome 10+, safari 5.1+ */
@@ -157,7 +157,7 @@ h1 {
    padding:.3em .8em; 
    overflow: visible;
 }
-.newbeer a:hover, .actions input:hover {
+.button a:hover, .actions input:hover {
    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e2a20a), color-stop(1, #aa7a07) );
    background:-moz-linear-gradient( center top, #e2a20a 5%, #aa7a07 100% );
    border:1px solid #dfa00a;
@@ -165,7 +165,7 @@ h1 {
    background-color:#dfa00a;
    color: #fff!important;
 }
-.newbeer a:active, .actions input:active {
+.button a:active, .actions input:active {
    position:relative;
    top:1px;
 }

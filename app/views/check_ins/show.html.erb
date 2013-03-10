@@ -1,30 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Review:</b>
+  <strong>Review:</strong>
   <%= @check_in.review %>
 </p>
 
 <p>
-  <b>Rating:</b>
+  <strong>Rating:</strong>
   <%= @check_in.rating %>
 </p>
 
 <p>
-  <b>Wishlist:</b>
+  <strong>Wishlist:</strong>
   <%= @check_in.wishlist %>
 </p>
 
 <p>
-  <b>Beer:</b>
+  <strong>Beer:</strong>
   <%= @check_in.beer_id %>
 </p>
 
 <p>
-  <b>User:</b>
+  <strong>User:</strong>
   <%= @check_in.user_id %>
 </p>
 
 
-<%= link_to 'Edit', edit_check_in_path(@check_in) %> |
+<%= link_to 'Edit', edit_check_in_path(@check_in) %> |  <%= link_to 'delete', check_in_path, method: :delete, data: { confirm: 'Are you sure?' } %><br />
 <%= link_to 'Back', check_ins_path %>

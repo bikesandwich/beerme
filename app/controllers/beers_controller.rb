@@ -74,7 +74,6 @@ class BeersController < ApplicationController
   end
 
   # DELETE /beers/1
-  # DELETE /beers/1.json
   def destroy
     @beer = Beer.find(params[:id])
     @beer.destroy

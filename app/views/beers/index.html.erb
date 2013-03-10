@@ -1,4 +1,4 @@
-<span class="home">
+<div class="home">
 <h1>All Beers</h1>
 
 
@@ -9,10 +9,11 @@
          
          <div class="beer">
          <h2> <%= link_to beer.title, beer %></h2>
-            <p class="brewery">Brewery: <%= beer.brewery %></p>
-            <p class="style">Style: <%= beer.style %></p>
-			<p class="brewery">Number of check-ins: <%= CheckIn.count(:all, :conditions => ['beer_id = ?', beer.id]) %></p>
-             <!-- <p class="rating"><%= beer.rating %> Stars |  Wishlist: <%= beer.wishlist ? "Yes" : "No" %></p>-->
+            <p class="brewery">Brewery: <%= beer.brewery %><br />
+            <span class="style">Style: <%= beer.style %></span></p>
+			<p class="brewery"><%= link_to "check in", beer %> <br/>
+                        Number of check-ins: <%= CheckIn.count(:all, :conditions => ['beer_id = ?', beer.id]) %> </p>
+             
             
          </div> 
          <% end %>
@@ -23,7 +24,7 @@
 <% end %>
 
 <br />
-<div class="newbeer">
+<div class="button">
 <%= link_to 'New Beer', new_beer_path %>
 </div>
-</span>
+</div>

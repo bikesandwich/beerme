@@ -7,13 +7,8 @@ controller :sessions do
   end
 
   resources :styles
-
-
   resources :check_ins
-
-
   resources :users
-
 
 resources :beers do
        collection do

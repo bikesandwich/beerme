@@ -45,7 +45,7 @@ class CheckInsController < ApplicationController
       @check_in.user_id = current_user.id
      end
      if @check_in.save
-      redirect_to @check_in, notice: 'Check-in was successfully created.'
+      redirect_to @check_in.beer, notice: 'Check-in was successfully created.'
      else
       render action: "new"
     end
@@ -73,13 +73,12 @@ class CheckInsController < ApplicationController
   end
 
   # DELETE /check_ins/1
-  # DELETE /check_ins/1.json
   def destroy
     @check_in = CheckIn.find(params[:id])
     @check_in.destroy
 
     respond_to do |format|
-       redirect_to check_ins_url 
+       format.html { redirect_to session[:previous] }
     end
   end
 end
