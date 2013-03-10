@@ -7,8 +7,10 @@
          
          <div class="beer">
          <h2> <%= link_to beer.title, beer %></h2>
-            <p class="brewery"><%= beer.brewery %></p>
-             <p class="style"><%= beer.style %></p>
+            <p class="brewery">Brewery: <%= beer.brewery %><br />
+            <span class="style">Style: <%= beer.style %></span></p>
+			<p class="brewery"><%= link_to "check in", beer %> <br/>
+                        Number of check-ins: <%= CheckIn.count(:all, :conditions => ['beer_id = ?', beer.id]) %> </p>
             
          </div> 
          <% end %>

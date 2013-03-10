@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :user_type %><br />
-    <%= f.number_field :user_type %>
+    <%= f.select :user_type, [[1, "User"],[2, "Admin"]]  %> 
   </div>
   <div class="field">
     <%= f.label :email %><br />
