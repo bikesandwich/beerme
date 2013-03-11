@@ -80,8 +80,9 @@
   
   <% @beer.check_in.order("created_at DESC").each do |r|  %>
   <div class="beer">
+<h2><%= link_to r.user.user_name, r.user %></h2>
 <p>
-Author: <%= r.user_id ? r.user.user_name : "Anonymous" %><br>
+
 Rating: <%= r.rating %><br>
 Review: <%= r.review %><br>
 <%= r.wishlist ? "On wishlist" : "Not on wishlist" %><br>

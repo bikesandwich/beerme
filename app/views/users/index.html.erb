@@ -1,31 +1,30 @@
-<h1>Listing users</h1>
+<div class="home">
+  
+<h1>Users</h1>
 
-<table>
-  <tr>
-    <th>User id</th>
-    <th>User name</th>
-    <th>User type</th>
-    <th>Email</th>
-    <th>Password digest</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
+
+
+
 
 <% @users.each do |user| %>
-  <tr>
-    <td><%= user.id %></td>
-    <td><%= user.user_name %></td>
-    <td><%= user.user_type %></td>
-    <td><%= user.email %></td>
-    <td><%= user.password_digest %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="beer">
+ 
+    <h2><%= link_to user.user_name, user %></h2>
+    <p>User type: <%= user.user_type %></p>
+    <p>Email: <%= user.email %></p>
+    <small><%= link_to 'Show', user %> |
+    <%= link_to 'Edit', edit_user_path(user) %> | 
+    <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></small>
+  
+  </div>
 <% end %>
-</table>
+
 
 <br />
 
+
+<div class="button">
 <%= link_to 'New User', new_user_path %>
+</div>
+</div>

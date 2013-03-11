@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	before_filter :save_path
 	
+	
   # GET /users
   # GET /users.json
   def index
