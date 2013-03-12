@@ -1,8 +1,8 @@
 <div class="single home">
 
 
-<div class="back">
-<%= link_to '<< Back', beers_path %>
+<div class="button">
+<%= link_to 'Back', beers_path %>
 </div>
 <p id="notice"><%= notice %></p>
 
@@ -20,17 +20,17 @@
   <%= @user.email %>
 </p>
 
-
-<%= link_to 'edit', edit_user_path(@user) %> | <%= link_to 'delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+<div class="button">
+<%= link_to 'edit', edit_user_path(@user) %> | <%= link_to 'delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %><br /><br />
 <%= link_to 'All users', users_path %>
-
+</div>
 </div>
 
 <h2>Reviews by <%= @user.user_name %></h2>
   <% @user.check_in.order("created_at DESC").each do |r|  %>
   <div class="beer">
 <p>
-<strong> <%= link_to r.beer.title, r.beer %></strong><br>
+<h2> <%= link_to r.beer.title, r.beer %></h2><br>
 Rating: <%= r.rating %><br>
 Review: <%= r.review %><br>
 <%= r.wishlist ? "On wishlist" : "Not on wishlist" %><br>
@@ -39,7 +39,7 @@ Review: <%= r.review %><br>
 Review date: <%= r.created_at %>
 
 </p>
-<small><%= link_to 'edit', edit_check_in_path(r) %></small>
+<div class="button"><%= link_to 'edit', edit_check_in_path(r) %></div>
 </div>
 <% end %>
 
