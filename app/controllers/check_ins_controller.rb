@@ -42,7 +42,7 @@ class CheckInsController < ApplicationController
   def create
     @check_in = CheckIn.new(params[:check_in])
      if current_user
-      @check_in.user_id = current_user
+      @check_in.user_id = current_user.id
      end
      if @check_in.save
       redirect_to @check_in.beer, notice: 'Check-in was successfully created.'
@@ -64,17 +64,11 @@ class CheckInsController < ApplicationController
     @check_in = CheckIn.find(params[:id])
     
     
-      if current_user and current_user == @check_in.user
-      respond_to do |format|
-        if @check_in.update_attributes(params[:check_in])
-          format.html { redirect_to @check_in.beer, notice: 'Check in was successfully updated.' }
-        else
-          format.html {  render action: "edit" }
-        end
+      if @check_in.update_attributes(params[:check_in])
+        redirect_to @check_in.beer, notice: 'Check in was successfully updated.' 
+      else
+        render action: "edit" 
       end
-    else
-      redirect_to session[:previous], :notice => "Illegal action"
-    end
    
   end
 

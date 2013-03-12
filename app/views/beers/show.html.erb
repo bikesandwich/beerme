@@ -18,6 +18,10 @@
   <%= @beer.style %>
 </p>
 
+<!-- <p class="rating">
+  
+  Rating: <%= @beer.rating %> |  Wishlist: <%= @beer.wishlist ? "Yes" : "No" %> 
+</p>-->
 <p class="note">
   <%= @beer.note %>
 </p>
@@ -25,24 +29,15 @@
 
 
              
-<<<<<<< HEAD
              
              <div class="button"><%= link_to 'Edit', edit_beer_path(@beer) %> &nbsp;
              <%= link_to 'Delete', @beer, method: :delete, data: { confirm: 'Are you sure?' } %>
             
 
 </div>
-=======
-             <% if current_user  %>
-             <small>
-              <%= link_to 'Edit', edit_beer_path(@beer) %> |
-             <%= link_to 'Delete', @beer, method: :delete, data: { confirm: 'Are you sure?' } %>
-             </small>
-             <% end %>
->>>>>>> Hid edit links from non-logged in users.
 
 </div>
-<% if current_user %> 
+
 <div class="beer">
   <h3>Check In</h3>
   
@@ -80,14 +75,12 @@
 <% end %>
 
 </div>
-  <% end %>
+  
 
   
- <h3>Check-ins</h3> 
   <% @beer.check_in.order("created_at DESC").each do |r|  %>
-  
   <div class="beer">
-<h2><%= link_to r.user.user_name, r.user  %></h2>
+<h2><%= link_to r.user.user_name, r.user %></h2>
 <p>
 
 Rating: <%= r.rating %><br>
@@ -98,16 +91,7 @@ Review: <%= r.review %><br>
 Review date: <%= r.created_at %>
 
 </p>
-<<<<<<< HEAD
 <div class="button"><%= link_to 'edit', edit_check_in_path(r) %></div>
-=======
-<% if current_user  %>      
-      <small><%= link_to 'edit', edit_check_in_path(r) %></small>
-  <% else %>
-
-<% end %>
-
->>>>>>> Hid edit links from non-logged in users.
 </div>
 <% end %>
 
