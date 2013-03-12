@@ -2,5 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'view', @user %> | <%= link_to 'delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+<br />
+<div class="button">
+<%= link_to 'View', @user %> | <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %><br /><br />
 <%= link_to 'Back', users_path %>
+</div

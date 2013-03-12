@@ -2,6 +2,6 @@
 
 <%= render 'form' %>
 
- | <%= link_to 'delete', check_in_path, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+<div class="redbutton"><%= link_to 'delete', check_in_path, method: :delete, data: { confirm: 'Are you sure?' } %></div><br /><br />
 <!-- <%= link_to 'Show', @check_in %> | -->
-<%= link_to 'Back', check_ins_path %>
+<div class="button"><%= link_to 'Back', check_ins_path %></div>
