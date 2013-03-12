@@ -21,9 +21,9 @@ src: url('/assets/neue-heavycond-webfont.ttf')
 
 body {
    /*background:url("/assets/bg.gif");	
-   background-size: 40px 40px;         */
-   background-color: #939293;   
-  font-family: 'Neue', arial, helvetica, sans-serif;
+   background-size: 40px 40px;         
+   background-color: #939293;     */
+  font-family:  arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 0; padding: 0;
@@ -122,7 +122,7 @@ h1 { font-family: 'Oswald', arial, sans-serif;
  }
   .search { width: 320px; float: right; }
   
-.content { padding: 15px 15px 20px; font-family: 'Neue', arial, sans-serif;}
+.content { padding: 15px 15px 20px; }
 
 .home { }
 .beer {
@@ -189,6 +189,7 @@ img.checkin {
    border:1px solid #5a2d00;
    display:inline-block;
    color:#fff!important;
+   font-family: arial, helvetica, sans-serif;
    font-size:1em;
    font-weight:bold;
    line-height: 1em;
@@ -227,6 +228,7 @@ img.checkin {
 	border:1px solid #d83526;
 	display:inline-block;
 	color:#ffffff;
+	font-family: arial, helvetica, sans-serif;
 	font-size:1em;
 	font-weight:bold;
         line-height: 1em;
