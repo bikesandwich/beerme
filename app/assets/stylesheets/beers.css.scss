@@ -6,31 +6,31 @@
 @font-face
 {
 font-family: Oswald;
-src: url('fonts/oswald-regular-webfont.ttf')
+src: url('/assets/oswald-regular-webfont.ttf')
 }
 @font-face
 {
 font-family: Oswald-light;
-src: url('fonts/oswald-light-webfont.ttf')
+src: url('/assets/oswald-light-webfont.ttf')
 }
 @font-face
 {
 font-family: Neue;
-src: url('fonts/neue-heavycond-webfont.ttf')
+src: url('/assets/neue-heavycond-webfont.ttf')
 }
 
 body {
-   background:url("/assets/bg.gif");	
-   background-size: 40px 40px; 
+   /*background:url("/assets/bg.gif");	
+   background-size: 40px 40px;         */
    background-color: #939293;   
-  font-family: arial, helvetica, verdana, sans-serif;
+  font-family: 'Neue', arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 0; padding: 0;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  
   font-size: 13px;
   line-height: 18px;
 }
@@ -94,7 +94,7 @@ div {
   }
 }
 
-h1 {
+h1 { font-family: 'Oswald', arial, sans-serif;
   small { font-weight: normal; font-size: .6em;}
 }
 .header { width: 100%; height: 200px; background: url('/assets/beerme-header.jpg') top left;  margin: 0; padding: 0; border-bottom: 1px solid #630;}
@@ -122,20 +122,20 @@ h1 {
  }
   .search { width: 320px; float: right; }
   
-.content { padding: 15px 30px 20px 30px; }
+.content { padding: 15px 15px 20px; font-family: 'Neue', arial, sans-serif;}
 
-.home {padding: 0px 30px 20px 10px; }
+.home { }
 .beer {
 	padding: 15px;
 	background: #ededed;
-	color: black;
+	color: #333;
 	border: 1px solid #ccc;	
 	width: 300px;
 	float: left;
 	margin: 0 15px 15px 0;
 	min-height: 90px;
      h2 {
-      padding: 0; margin: 0 0 0 3px; font-family: 'Oswald-light';
+      padding: 0; margin: 0 0 10px 3px; font-family: 'Oswald', arial, sans-serif; font-size: 25px;
       
 	 a { text-decoration: none; display: block; padding: 3px 3px; margin: -3px;}
       }
@@ -189,7 +189,6 @@ img.checkin {
    border:1px solid #5a2d00;
    display:inline-block;
    color:#fff!important;
-   font-family:Trebuchet MS;
    font-size:1em;
    font-weight:bold;
    line-height: 1em;
@@ -228,12 +227,11 @@ img.checkin {
 	border:1px solid #d83526;
 	display:inline-block;
 	color:#ffffff;
-	font-family:Trebuchet MS;
 	font-size:1em;
 	font-weight:bold;
-   line-height: 1em;
-   padding:.5em 1em;
-   text-decoration:none !important;
+        line-height: 1em;
+        padding:.5em 1em;
+        text-decoration:none !important;
 }
 
 
@@ -253,12 +251,13 @@ img.checkin {
 .back a {font-size: 14px; font-weight: bold; display: block; padding: 4px; margin-bottom: 10px; width: 292px;}
 
 
+
+/* navigation */
  #nav{
 	 position:absolute;
  	top:10px;
  	right:30px;
  }
- 
  #nav ul{
  	list-style-type:none;
  	margin:0 0 0 0;
@@ -270,7 +269,6 @@ img.checkin {
         box-shadow:  2px 2px 5px 2px rgba(113, 74, 3, .8);
         overflow:auto;
  }
- 
  #nav ul li{
  	float:left;
  	margin-right:10px;
@@ -278,7 +276,6 @@ img.checkin {
  #nav ul li:last-of-type{
  	margin-right:0;
  }
- 
  #nav ul li a{
  	text-decoration:none;
  	color:#3c1400;

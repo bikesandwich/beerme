@@ -13,8 +13,7 @@
 
 <p class="brewery">
   <%= @beer.brewery %>
-</p>
-<p class="style">
+<br />
   <%= @beer.style %>
 </p>
 
@@ -22,13 +21,6 @@
   <%= @beer.note %>
 </p>
 
-
-             
-             <div class="button"><%= link_to 'Edit', edit_beer_path(@beer) %> &nbsp;
-             <%= link_to 'Delete', @beer, method: :delete, data: { confirm: 'Are you sure?' } %>
-            
-
-</div>
 
              <% if current_user  %>
              <small>
@@ -94,7 +86,7 @@ Review: <%= r.review %><br>
 Review date: <%= r.created_at %>
 
 </p>
-<div class="button"><%= link_to 'edit', edit_check_in_path(r) %></div>
+
 <% if current_user  %>      
       <small><%= link_to 'edit', edit_check_in_path(r) %></small>
   <% else %>
