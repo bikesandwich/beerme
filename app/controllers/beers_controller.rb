@@ -3,6 +3,7 @@ class BeersController < ApplicationController
   before_filter :check_login, :except => [:index, :search, :show]
   before_filter :save_path
   
+  
   # GET /beers
   def index
     @beers = Beer.all
