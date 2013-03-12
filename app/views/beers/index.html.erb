@@ -9,11 +9,18 @@
          
          <div class="beer">
          <h2> <%= link_to beer.title, beer %></h2>
+<<<<<<< HEAD
             <img src="/assets/barrel.png" class="barrel" width="40" height="40"><p class="brewery">Brewery: <%= beer.brewery %></p>
             <img src="/assets/wheat.png" class="wheat" width="50" height="50"><p class="style">Style: <%= beer.style %></span></p>
 			<img src="/assets/checkin.png" class="checkin" width="50" height="50"> 
                         <p class="checkin">Number of check-ins: <%= CheckIn.count(:all, :conditions => ['beer_id = ?', beer.id]) %> </p>
 						<div class="button" style="margin:0px"><%= link_to "check in", beer %></div>
+=======
+            <p class="brewery">Brewery: <%= beer.brewery %><br />
+            <span class="style">Style: <%= beer.style %></span></p>
+			<p class="brewery"><!-- <%= link_to "check in", beer %> <br/>-->
+                        Number of check-ins: <%= CheckIn.count(:all, :conditions => ['beer_id = ?', beer.id]) %> </p>
+>>>>>>> Hid edit links from non-logged in users.
              
             
          </div> 
