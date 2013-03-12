@@ -3,9 +3,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+@font-face
+{
+font-family: Oswald;
+src: url('fonts/oswald-regular-webfont.ttf')
+}
+@font-face
+{
+font-family: Oswald-light;
+src: url('fonts/oswald-light-webfont.ttf')
+}
+@font-face
+{
+font-family: Neue;
+src: url('fonts/neue-heavycond-webfont.ttf')
+}
+
 body {
-  background-color: #fff;
-  color: #333;
+   background:url("/assets/bg.gif");	
+   background-size: 40px 40px; 
+   background-color: #939293;   
   font-family: arial, helvetica, verdana, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -71,6 +88,7 @@ div {
     color: #fff;
   }
   ul li {
+  	color: #000000;
     font-size: 12px;
     list-style: square;
   }
@@ -103,23 +121,48 @@ h1 {
  	opacity:.9;
  }
   .search { width: 320px; float: right; }
-.content { margin: 15px 30px 20px 30px; }
-.home {margin: 15px 30px 20px 30px; }
+  
+.content { padding: 15px 30px 20px 30px; }
+
+.home {padding: 0px 30px 20px 10px; }
 .beer {
 	padding: 15px;
 	background: #ededed;
+	color: black;
 	border: 1px solid #ccc;	
 	width: 300px;
 	float: left;
 	margin: 0 15px 15px 0;
 	min-height: 90px;
      h2 {
-      padding: 0; margin: 0 0 0 3px;
+      padding: 0; margin: 0 0 0 3px; font-family: 'Oswald-light';
       
 	 a { text-decoration: none; display: block; padding: 3px 3px; margin: -3px;}
       }
-      p, small { margin: 0 0 10px 3px;
+      p, small { padding: 0 0 0 0px; margin: 0 0 10px 3px;
         }
+}
+
+.beer p.brewery {  padding: 0 0 15px 3px;}
+.beer p.style {  padding: 0 0 5px 3px;}
+.beer p.checkin {  padding: 0 0 5px 3px;}
+
+img.barrel {
+
+	 margin: -15px 5px 20px;
+	 padding: 25px 0px;
+      float: left;
+}
+
+img.wheat {
+	margin: 0px -55px 20px;
+      float: left;
+}
+
+
+img.checkin {
+	 margin: 0px -50px 10px;
+      float: left;
 }
 
 .single .beer { 
@@ -129,7 +172,7 @@ h1 {
 }
 
 
-.button { width: 100%; clear: both; margin: 0 0 30px 0;}
+.button { width: 100%; clear: both; margin: 0 0 0px 0;}
 .button a, .actions input {
    background-color:#663300;/* fallback */
    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #834200), color-stop(1, #5a2d00) );/* chrome 2+, safari 4+ */
@@ -168,6 +211,43 @@ h1 {
 .button a:active, .actions input:active {
    position:relative;
    top:1px;
+}
+
+.redbutton {clear: both; margin: 0 0 0px 0;}
+.redbutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:1em;
+	font-weight:bold;
+   line-height: 1em;
+   padding:.5em 1em;
+   text-decoration:none !important;
+}
+
+
+.redbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background-color:#ce0100;
+	color: #fff!important;
+}
+
+.redbutton:active {
+	position:relative;
+	top:1px;
 }
 
 .back a {font-size: 14px; font-weight: bold; display: block; padding: 4px; margin-bottom: 10px; width: 292px;}

@@ -13,9 +13,9 @@
     <h2><%= link_to user.user_name, user %></h2>
     <p>User type: <%= user.user_type %></p>
     <p>Email: <%= user.email %></p>
-    <small><%= link_to 'Show', user %> |
-    <%= link_to 'Edit', edit_user_path(user) %> | 
-    <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></small>
+    <div class="button"><%= link_to 'Show', user %> 
+    <%= link_to 'Edit', edit_user_path(user) %>  
+    <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></div>
   
   </div>
 <% end %>
