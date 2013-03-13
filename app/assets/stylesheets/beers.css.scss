@@ -20,9 +20,7 @@ src: url('/assets/neue-heavycond-webfont.ttf')
 }
 
 body {
-   /*background:url("/assets/bg.gif");	
-   background-size: 40px 40px;         
-   background-color: #939293;     */
+   background-image: -webkit-linear-gradient(bottom right, #EFD069 0%, #FFF5CF 100%);
   font-family:  arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
