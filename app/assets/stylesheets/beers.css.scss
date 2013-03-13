@@ -143,27 +143,10 @@ h1 { font-family: 'Oswald', arial, sans-serif;
         }
 }
 
-.beer p.brewery {  padding: 0 0 15px 3px;}
-.beer p.style {  padding: 0 0 5px 3px;}
-.beer p.checkin {  padding: 0 0 5px 3px;}
+.beer p.brewery {  padding: 0 0 0px 20px; background: url(/assets/barrel.png) no-repeat left center; background-size: 15px 15px;}
+.beer p.style {  padding: 0 0 0 20px; background: url(/assets/wheat.png) no-repeat left center; background-size: 15px 15px;}
+.beer p.checkin {  padding: 0 0 0px 20px; background: url(/assets/checkin.png) no-repeat left center; background-size: 15px 15px;}
 
-img.barrel {
-
-	 margin: -15px 5px 20px;
-	 padding: 25px 0px;
-      float: left;
-}
-
-img.wheat {
-	margin: 0px -55px 20px;
-      float: left;
-}
-
-
-img.checkin {
-	 margin: 0px -50px 10px;
-      float: left;
-}
 
 .single .beer { 
 	width: 500px;
