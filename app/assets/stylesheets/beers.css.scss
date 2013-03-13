@@ -143,16 +143,16 @@ h1 { font-family: 'Oswald', arial, sans-serif;
         }
 }
 
-.beer p.brewery {  padding: 0 0 0px 20px; background: url(/assets/barrel.png) no-repeat left center; background-size: 15px 15px;}
-.beer p.style {  padding: 0 0 0 20px; background: url(/assets/wheat.png) no-repeat left center; background-size: 15px 15px;}
-.beer p.checkin {  padding: 0 0 0px 20px; background: url(/assets/checkin.png) no-repeat left center; background-size: 15px 15px;}
-
-
 .single .beer { 
 	width: 500px;
 	float: none;
       .note { font-size: 1.1em;}
 }
+
+
+.brewery {  padding: 0 0 0px 20px; background: url(/assets/barrel.png) no-repeat left center; background-size: 15px 15px;}
+.style {  padding: 0 0 0 20px; background: url(/assets/wheat.png) no-repeat left center; background-size: 15px 15px;}
+.checkin {  padding: 0 0 0px 20px; background: url(/assets/checkin.png) no-repeat left center; background-size: 15px 15px;}
 
 
 .button { width: 100%; clear: both; margin: 0 0 0px 0;}
