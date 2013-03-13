@@ -120,7 +120,9 @@ h1 { font-family: 'Oswald', arial, sans-serif;
  }
   .search { width: 320px; float: right; }
   
-.content { padding: 15px 15px 20px; }
+.content { padding: 15px 15px 20px; font-family: 'Oswald-light', arial, sans-serif; font-size: 15px;
+
+	p.username {font-family: 'Oswald-light', arial, sans-serif; font-size: 20px;}}
 
 .home { }
 .beer {
@@ -144,7 +146,7 @@ h1 { font-family: 'Oswald', arial, sans-serif;
 .single .beer { 
 	width: 500px;
 	float: none;
-      .note { font-size: 1.1em;}
+      .note { font-size: .9em;}
 }
 
 
