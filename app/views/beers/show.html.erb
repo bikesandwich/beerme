@@ -11,11 +11,11 @@
   <%= @beer.title %>
 </h2>
 
-<p class="brewery">
+<p class="brewery"><strong>
   <%= @beer.brewery %>
-<br />
+</p> <p class="style">
   <%= @beer.style %>
-</p>
+</p></strong>
 
 <p class="note">
   <%= @beer.note %>
@@ -78,12 +78,12 @@
 <h2><%= link_to r.user.user_name, r.user  %></h2>
 <p>
 
-Rating: <%= r.rating %><br>
-Review: <%= r.review %><br>
+Rating: <strong><%= r.rating %></strong><br>
+Review: <strong><%= r.review %></strong><br>
 <%= r.wishlist ? "On wishlist" : "Not on wishlist" %><br>
 
 
-Review date: <%= r.created_at %>
+Review date: <strong><%= r.created_at %></strong>
 
 </p>
 

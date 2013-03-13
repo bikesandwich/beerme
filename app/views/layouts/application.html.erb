@@ -40,8 +40,9 @@
 <div class="content">
   
   <% if current_user %>
+  <p class="username">
 <%= current_user.user_name %> is logged in 
-(<%= link_to 'Logout', logout_url, :method => :delete %>)
+(<%= link_to 'Logout', logout_url, :method => :delete %>)</p>
 <% else %>
 <%= form_tag login_url do %>
   <p>

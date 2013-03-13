@@ -11,8 +11,8 @@
 <div class="beer">
  
     <h2><%= link_to user.user_name, user %></h2>
-    <p>User type: <%= user.user_type %></p>
-    <p>Email: <%= user.email %></p>
+    <p>User type: <strong><%= user.user_type %></strong></p>
+    <p>Email: <strong><%= user.email %></strong></p>
     
   <% if current_user  %>
     <small><%= link_to 'edit', edit_user_path(user) %> | 
