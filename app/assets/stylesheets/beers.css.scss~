@@ -105,7 +105,6 @@ h1 { font-family: 'Oswald', arial, sans-serif;
  	padding:0;
  	position:relative;
  	top:60px;
- 	
  }
  h3.logo a{
  	 display:block;
@@ -114,11 +113,6 @@ h1 { font-family: 'Oswald', arial, sans-serif;
  	width:424px;
  	background-image:url("/assets/logo.png");
  	opacity:.7;
- 	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	transition: all .5s ease;
  }
  h3.logo a:hover{
  	background-color:transparent !important;
@@ -162,7 +156,7 @@ h1 { font-family: 'Oswald', arial, sans-serif;
 
 
 .button { width: 100%; clear: both; margin: 0 0 0px 0;}
-.button a, .actions input , .loginButton{
+.button a, .actions input {
    background-color:#663300;/* fallback */
    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #834200), color-stop(1, #5a2d00) );/* chrome 2+, safari 4+ */
    background-image:-webkit-linear-gradient(#834200,#5a2d00); /* chrome 10+, safari 5.1+ */
@@ -189,7 +183,7 @@ h1 { font-family: 'Oswald', arial, sans-serif;
    padding:.3em .8em; 
    overflow: visible;
 }
-.button a:hover, .actions input:hover, .loginButton:hover {
+.button a:hover, .actions input:hover {
    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e2a20a), color-stop(1, #aa7a07) );
    background:-moz-linear-gradient( center top, #e2a20a 5%, #aa7a07 100% );
    border:1px solid #dfa00a;
@@ -197,7 +191,7 @@ h1 { font-family: 'Oswald', arial, sans-serif;
    background-color:#dfa00a;
    color: #fff!important;
 }
-.button a:active, .actions input:active, loginButton:active{
+.button a:active, .actions input:active {
    position:relative;
    top:1px;
 }
@@ -223,15 +217,6 @@ h1 { font-family: 'Oswald', arial, sans-serif;
         line-height: 1em;
         padding:.5em 1em;
         text-decoration:none !important;
-}
-.redbutton a{
-	text-decoration:none;
-	color:#fff;
-}
-.redbutton a:hover{
-	text-decoration:none;
-	color:#fff;
-	background-color:transparent;
 }
 
 
@@ -287,31 +272,4 @@ h1 { font-family: 'Oswald', arial, sans-serif;
  	text-decoration:none;
  	background-color:#3c1400;
  	color:#fff;
- }
- 
- textarea,input[type='text'],input[type='password'],select{
- 	background-color:#fff;
- 	border:1px solid #630;
- 	padding:5px 10px;
- 	font-family: arial, helvetica, sans-serif;
- 	min-width:270px;
- }
- input[type='submit']{
- 	min-width:auto;
- }
- select{
- 	padding:0;
- 	min-width:290px;
- }
- #search_text{
- 	min-width:auto;
- 	width:140px;
- }
- #check_in_review{
- 	
- }
- #user_name, #password{
- 	width:140px;
- 	min-width:auto;
- 	margin-right:10px;
  }

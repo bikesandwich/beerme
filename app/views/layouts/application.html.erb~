@@ -22,12 +22,27 @@
 		</span></p>
 		<% end%>
 	</div>
+	
+	<div id="nav">
+		<ul>
+			<li><%= link_to "Home", beers_url %></li>
+			<li><a href="/users">Drinkers</a></li>
+			<li><%= link_to 'Register', new_user_path %></li>
+			
+			<!--li><a href="/">Beers</a></li-->
+			<!--li><a href="/check_ins">Check Ins</a></li-->
+			<!--li><a href="/styles">Styles</a></li -->
+		</ul>
+	</div>
+	
+	
 </div>
 <div class="content">
   
   <% if current_user %>
+  <p class="username">
 <%= current_user.user_name %> is logged in 
-(<%= link_to 'Logout', logout_url, :method => :delete %>)
+(<%= link_to 'Logout', logout_url, :method => :delete %>)</p>
 <% else %>
 <%= form_tag login_url do %>
   <p>
@@ -42,7 +57,7 @@
   <%= submit_tag 'Login' %>
     </p>
   <% end %>
-<% end %></div>
+<% end %>
   
   
 <%= yield %>
