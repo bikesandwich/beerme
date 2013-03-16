@@ -1,9 +1,12 @@
+<div class="beer">
 <h1>Editing user</h1>
 
 <%= render 'form' %>
 
 <br />
-<div class="button">
+
 <%= link_to 'View', @user %> | <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %><br /><br />
+<div class="button">
 <%= link_to 'Back', users_path %>
-</div
+</div>
+</div>

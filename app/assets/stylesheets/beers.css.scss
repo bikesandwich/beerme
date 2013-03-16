@@ -87,7 +87,7 @@ div {
   }
   ul li {
   	color: #000000;
-    font-size: 12px;
+    font-size: 15px;
     list-style: square;
   }
 }
@@ -151,10 +151,46 @@ h1 { font-family: 'Oswald', arial, sans-serif;
 
 .single .beer { 
 	width: 500px;
-	float: none;
       .note { font-size: 1em;}
+	  
 }
 
+.single .beercheckin { padding: 15px;
+	background: #ededed;
+	color: #333;
+	border: 1px solid #ccc;	
+	width: 300px;
+	margin: 0 15px 15px 0; 
+	position:absolute; 
+	top: 305px; left: 570px;
+}
+
+.single .checkins {clear: both;}
+
+.beerintro {
+	padding: 15px;
+	background: #ededed;
+	color: #333;
+	border: 1px solid #ccc;	
+	width: 300px;
+	float: left;
+	margin: 0 15px 15px 0;
+	
+	
+	.intro, ul {font-size: 20px; line-height: 25px;}
+
+}
+
+.beertable {
+	padding: 15px;
+	background: #ededed;
+	color: #333;
+	border: 1px solid #ccc;	
+	width: 600px;
+	float: left;
+	margin: 0 15px 15px 0;
+	
+}
 
 .beer p.brewery {  padding: 0 0 0px 20px; background: url(/assets/barrel.png) no-repeat left center; background-size: 15px 15px;}
 .beer p.style {  padding: 0 0 0 20px; background: url(/assets/wheat.png) no-repeat left center; background-size: 15px 15px;}

@@ -30,8 +30,9 @@
              <% end %>
 
 </div>
+<div class="beercheckin">
 <% if current_user %> 
-<div class="beer">
+
   <h3>Check In</h3>
   
       <%= form_for(@check_in) do |f| %>
@@ -70,7 +71,7 @@
 </div>
   <% end %>
 
-  
+ <div class="checkins"> 
  <h3>Check-ins</h3> 
   <% @beer.check_in.order("created_at DESC").each do |r|  %>
   
@@ -95,7 +96,7 @@ Review date: <strong><%= r.created_at %></strong>
 
 </div>
 <% end %>
-
+</div>
 
 
 
