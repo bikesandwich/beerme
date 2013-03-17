@@ -28,6 +28,8 @@
 
 
 <div class="button">
+<% if current_user && current_user.user_type == 2 %>
 <%= link_to 'New User', new_user_path %>
+<% end %>
 </div>
 </div>

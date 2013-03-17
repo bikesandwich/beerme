@@ -15,10 +15,12 @@
     <%= f.label :user_name %><br />
     <%= f.text_field :user_name %>
   </div>
+  <% if current_user && current_user.user_type == 2%>
   <div class="field">
     <%= f.label :user_type %><br />
     <%= f.select :user_type, [["Choose one"],["User", 1],["Admin", 2]]  %> 
   </div>
+  <% end %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>

@@ -26,9 +26,12 @@
 	<div id="nav">
 		<ul>
 			<li><%= link_to "Home", beers_url %></li>
+			<% if current_user %>
 			<li><a href="/users">Drinkers</a></li>
+			<% end %>
+			<% if !current_user %>
 			<li><%= link_to 'Register', new_user_path %></li>
-			
+			<% end %>
 			<!--li><a href="/">Beers</a></li-->
 			<!--li><a href="/check_ins">Check Ins</a></li-->
 			<!--li><a href="/styles">Styles</a></li -->
