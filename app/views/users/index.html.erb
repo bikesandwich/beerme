@@ -14,10 +14,11 @@
     <p>User type: <strong><%= user.user_type %></strong></p>
     <p>Email: <strong><%= user.email %></strong></p>
     
-  <% if current_user  %>
+  <% if current_user && current_user.user_name == user.user_name || current_user && current_user.user_type == 2 %>
     <small><%= link_to 'edit', edit_user_path(user) %> | 
     <%= link_to 'delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></small>
   <% end %>
+
   
   </div>
 <% end %>

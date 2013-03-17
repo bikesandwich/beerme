@@ -90,7 +90,7 @@ Review date: <strong><%= r.created_at %></strong>
 
 </p>
 
-<% if current_user  %>      
+<% if current_user && current_user.user_name == r.user.user_name || current_user && current_user.user_type == 2 %>      
       <small><%= link_to 'edit', edit_check_in_path(r) %></small>
   <% else %>
 
