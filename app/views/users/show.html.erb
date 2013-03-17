@@ -25,7 +25,7 @@
 <%= link_to 'edit', edit_user_path(@user) %> | <%= link_to 'delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
 </small>
 <% end %>
-<% else if current_user && current_user.user_type == 1  %>
+<% else if current_user && current_user.user_name == @user.user_name  %>
 <small>
 <%= link_to 'edit', edit_user_path(@user) %>
 </small>
