@@ -91,7 +91,9 @@ Review date: <strong><%= r.created_at %></strong>
 </p>
 
 <% if current_user && current_user.user_name == r.user.user_name || current_user && current_user.user_type == 2 %>      
-      <small><%= link_to 'edit', edit_check_in_path(r) %></small>
+      <small>
+	  <%= link_to 'edit', edit_check_in_path(r) %> | <%= link_to 'delete', r, method: :delete, data: { confirm: 'Are you sure?' } %>
+	  </small>
   <% else %>
 
 <% end %>
