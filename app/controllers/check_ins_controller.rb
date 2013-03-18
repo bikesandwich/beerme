@@ -42,7 +42,7 @@ class CheckInsController < ApplicationController
   def create
     @check_in = CheckIn.new(params[:check_in])
      if current_user
-      @check_in.user_id = current_user
+      @check_in.user_id = current_user.id
      end
      if @check_in.save
       redirect_to @check_in.beer, notice: 'Check-in was successfully created.'
