@@ -20,6 +20,10 @@
     <%= f.label :user_type %><br />
     <%= f.select :user_type, [["Choose one"],["User", 1],["Admin", 2]]  %> 
   </div>
+  <%else %>
+  <div class="field">
+    <%= f.hidden_field :user_type, :value => 1  %> 
+  </div>
   <% end %>
   <div class="field">
     <%= f.label :email %><br />
